@@ -1,0 +1,17 @@
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\YourStorage.csproj.AssemblyReference.cache
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddExciste.resources
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddMain.resources
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.AddNew.resources
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Info.resources
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Login.resources
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.MainMenu.resources
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Register.resources
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\YourStorage.csproj.GenerateResource.cache
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\YourStorage.csproj.CoreCompileInputs.cache
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\Дом\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.DelObject.resources
