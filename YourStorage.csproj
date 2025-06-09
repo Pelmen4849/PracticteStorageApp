@@ -61,23 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adds\AddMain.cs">
+    <Compile Include="AddMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Adds\AddMain.Designer.cs">
+    <Compile Include="AddMain.Designer.cs">
       <DependentUpon>AddMain.cs</DependentUpon>
     </Compile>
     <Compile Include="DataBase.cs" />
-    <Compile Include="Adds\AddNew.cs">
+    <Compile Include="AddNew.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Adds\AddNew.Designer.cs">
+    <Compile Include="AddNew.Designer.cs">
       <DependentUpon>AddNew.cs</DependentUpon>
     </Compile>
-    <Compile Include="Adds\AddExciste.cs">
+    <Compile Include="AddExciste.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Adds\AddExciste.Designer.cs">
+    <Compile Include="AddExciste.Designer.cs">
       <DependentUpon>AddExciste.cs</DependentUpon>
     </Compile>
     <Compile Include="DelObject.cs">
@@ -112,13 +112,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Adds\AddExciste.resx">
+    <EmbeddedResource Include="AddExciste.resx">
       <DependentUpon>AddExciste.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Adds\AddMain.resx">
+    <EmbeddedResource Include="AddMain.resx">
       <DependentUpon>AddMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Adds\AddNew.resx">
+    <EmbeddedResource Include="AddNew.resx">
       <DependentUpon>AddNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DelObject.resx">

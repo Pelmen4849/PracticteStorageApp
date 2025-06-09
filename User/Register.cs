@@ -16,12 +16,16 @@ namespace WindowsFormsApp2
         
         DataBase dataBase = new DataBase();
         
-        public Register()
+        public Register(string v)
         {
-            InitializeComponent();
+            InitializeComponent(v);
             StartPosition = FormStartPosition.CenterScreen;
         }
 
+        private void InitializeComponent(string v)
+        {
+            throw new NotImplementedException();
+        }
 
         private void label6_Click(object sender, EventArgs e)
         {

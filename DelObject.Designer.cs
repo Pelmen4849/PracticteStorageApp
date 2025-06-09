@@ -26,7 +26,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(System.Windows.Forms.Label delobj)
         {
             this.Delete = new System.Windows.Forms.Button();
             this.Exit = new System.Windows.Forms.Button();
@@ -141,7 +141,7 @@
             this.Controls.Add(this.namebox);
             this.Controls.Add(this.Exit);
             this.Controls.Add(this.Delete);
-            this.MinimumSize = new System.Drawing.Size(400, 497);
+            this.Name = delobj;
             this.Text = "Удаление товара";
             this.ResumeLayout(false);
             this.PerformLayout();

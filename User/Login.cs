@@ -18,19 +18,21 @@ namespace WindowsFormsApp2
         private int count = 0;
         private System.Threading.Timer blockTimer;
         private string captchaText;
+        private string V;
 
         public Login()
         {
             InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
-            GenerateNewCaptcha();
+            captchbox.Hide();
+            captchpic.Hide();
 
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Register register = new Register();
+            Register register = new Register(V);
             register.Show();
         }
 
@@ -59,7 +61,8 @@ namespace WindowsFormsApp2
                 if (count == 0)
                 {
                     GenerateNewCaptcha();
-                  
+                    captchpic.Show();
+                    captchbox.Show();
                 }
 
                 if (count > 0 && !captchbox.Text.Equals(captchaText, StringComparison.OrdinalIgnoreCase))

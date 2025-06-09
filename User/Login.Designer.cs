@@ -130,7 +130,6 @@
             this.Controls.Add(this.logbox);
             this.Controls.Add(this.registration);
             this.Controls.Add(this.enter);
-            this.MinimumSize = new System.Drawing.Size(445, 402);
             this.Name = "Login";
             this.Text = "Вход";
             ((System.ComponentModel.ISupportInitialize)(this.captchpic)).EndInit();

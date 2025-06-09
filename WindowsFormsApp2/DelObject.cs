@@ -17,14 +17,11 @@ namespace WindowsFormsApp2
         DataBase dataBase = new DataBase();
         public DelObject()
         {
-            InitializeComponent("DelObject");
+            InitializeComponent();
             StartPosition = FormStartPosition.CenterScreen;
         }
 
-        private void InitializeComponent(string v)
-        {
-           
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -35,16 +32,55 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataBase.OpenConnection();
-
             var Name = namebox.Text;
             var Count = countbox.Text;
             var Storage = storagebox.Text;
             var Slot = slotbox.Text;
-            var addQuery = $"delete from Object where Name = '{Name}' and ID_Storage = {Storage} and Slot = {Slot}";
-            var command = new SqlCommand(addQuery, dataBase.GetConnection());
+
+            if (!int.TryParse(Count, out int countToRemove) || countToRemove <= 0)
+            {
+                MessageBox.Show("Количество должно быть целым числом больше 0!", "Ошибка!", MessageBoxButtons.OK);
+                return;
+            }
+
+            dataBase.OpenConnection();
+
+            // Сначала проверим текущее количество
+            var checkQuery = $"SELECT Count FROM Object WHERE Name = '{Name}' AND ID_Storage = '{Storage}' AND Slot = '{Slot}'";
+            var checkCommand = new SqlCommand(checkQuery, dataBase.GetConnection());
+            var currentCount = Convert.ToInt32(checkCommand.ExecuteScalar());
+
+            if (currentCount < countToRemove)
+            {
+                MessageBox.Show($"Недостаточно товара на складе! Текущее количество: {currentCount}", "Ошибка!", MessageBoxButtons.OK);
+                dataBase.CloseConnection();
+                return;
+            }
+
+            if (MessageBox.Show($"Списать {countToRemove} единиц товара {Name}?", "Подтверждение",
+                MessageBoxButtons.YesNo) != DialogResult.Yes)
+            {
+                dataBase.CloseConnection();
+                return;
+            }
+
+            // Обновляем количество (уменьшаем на указанное значение)
+            var updateQuery = $"UPDATE Object SET Count = Count - {countToRemove} WHERE Name = '{Name}' AND ID_Storage = '{Storage}' AND Slot = '{Slot}'";
+            var command = new SqlCommand(updateQuery, dataBase.GetConnection());
             command.ExecuteNonQuery();
-            MessageBox.Show("Запись Удалена.", "Запись Удалена.", MessageBoxButtons.OK);
+
+            // Проверяем, не стало ли количество 0 или меньше, и удаляем запись если нужно
+            if (currentCount - countToRemove <= 0)
+            {
+                var deleteQuery = $"DELETE FROM Object WHERE Name = '{Name}' AND ID_Storage = '{Storage}' AND Slot = '{Slot}'";
+                var deleteCommand = new SqlCommand(deleteQuery, dataBase.GetConnection());
+                deleteCommand.ExecuteNonQuery();
+                MessageBox.Show("Товар полностью списан и удален из базы.", "Успешно", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show($"Товар списан. Осталось: {currentCount - countToRemove}", "Успешно", MessageBoxButtons.OK);
+            }
 
             dataBase.CloseConnection();
         }

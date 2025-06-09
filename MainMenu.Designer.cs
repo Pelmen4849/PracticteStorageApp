@@ -71,7 +71,6 @@
             this.Controls.Add(this.watch);
             this.Controls.Add(this.delete);
             this.Controls.Add(this.add);
-            this.MinimumSize = new System.Drawing.Size(397, 478);
             this.Name = "MainMenu";
             this.Text = "Меню";
             this.Load += new System.EventHandler(this.Form1_Load);
