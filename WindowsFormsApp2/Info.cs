@@ -171,10 +171,5 @@ namespace WindowsFormsApp2
         {
             searchStorage(dataGridView1);
         }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

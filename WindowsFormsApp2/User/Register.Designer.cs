@@ -2,7 +2,7 @@
 {
     partial class Register
     {
-        
+        private const string V = "Register";
 
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(System.Windows.Forms.Label v)
         {
             this.Fam = new System.Windows.Forms.Label();
             this.Fambox = new System.Windows.Forms.TextBox();
@@ -184,7 +184,7 @@
             this.Controls.Add(this.Surname);
             this.Controls.Add(this.Fambox);
             this.Controls.Add(this.Fam);
-            this.MinimumSize = new System.Drawing.Size(440, 355);
+            this.Name = v;
             this.Text = "Регистрация";
             this.Load += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
